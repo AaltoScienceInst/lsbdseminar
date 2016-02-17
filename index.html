@@ -16,7 +16,7 @@ title: AScI LSBD Seminar
     <p>Below is a list
         of past and upcoming talks for the current term.  A list of 
         talk from previous terms is
-        <a href="{{site.baseurl}}/past-terms/">here</a>.
+        <a href="{{site.baseurl}}past-terms/">here</a>.
     </p>
 </div>
 
@@ -26,7 +26,7 @@ title: AScI LSBD Seminar
         {% for talk in talks %}
             <tr>
                 <td class="seminar-talk-date">
-                    <a href="{{talk.url}}">{{talk.talkdate}}</a>
+                    <a href="{{site.baseurl}}{{talk.url}}">{{talk.talkdate}}</a>
                 </td>
                 <td class="seminar-talk-speaker">
                     {% if talk.speakerurl %}
@@ -39,7 +39,7 @@ title: AScI LSBD Seminar
                     {% endif %}
                 </td>
                 <td class="seminar-talk-title">
-                    <a href="{{talk.url}}">{{talk.talktitle}}</a>
+                    <a href="{{site.baseurl}}{{talk.url}}">{{talk.talktitle}}</a>
                 </td>
             </tr>
         {% endfor %}

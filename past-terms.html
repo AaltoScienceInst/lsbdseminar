@@ -23,7 +23,7 @@ title: AScI LSBD Seminar - Past Terms
                 {% for talk in talks %}
                     <tr>
                         <td class="seminar-talk-date">
-                            <a href="{{talk.url}}">{{talk.talkdate}}</a>
+                            <a href="{{site.baseurl}}{{talk.url}}">{{talk.talkdate}}</a>
                         </td>
                         <td class="seminar-talk-speaker">
                             {% if talk.speakerurl %}
@@ -36,7 +36,7 @@ title: AScI LSBD Seminar - Past Terms
                             {% endif %}
                         </td>
                         <td class="seminar-talk-title">
-                            <a href="{{talk.url}}">{{talk.talktitle}}</a>
+                            <a href="{{site.baseurl}}{{talk.url}}">{{talk.talktitle}}</a>
                         </td>
                     </tr>
                 {% endfor %}
