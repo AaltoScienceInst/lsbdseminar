@@ -1,73 +1,63 @@
-# Louis's Home Page
+# LSBD Seminar web page
 
 ## About 
 
-This repo is the [Jekyll][jekyll] source to Louis Theran's 
-home page, which is hosted at <http://theran.lt>.
-
-## License
-
-The code and layouts are derived from Jekyll, and inherit that
-license.  There is a [template branch][lttemp] that 
-you should fork if you want to make a similar 
-site.  There are some [directions][quickstart] for how to 
-do that.
-
-All the actual site content is copyright Louis Theran and 
-may not be used except at the site <http://theran.lt/>.
-
-The stylesheet here uses the font [Atlas Grotesk][atlas].  This
-is licensed only for <http://theran.lt/>.  You need to buy your own 
-license if you want to use it.  The [template version][lttemp] of this 
-site has a stylesheet without the fonts.
-
-[jekyll]: http://jekyllrb.com/
-[atlas]: https://commercialtype.com/typefaces/atlas/grotesk
-[lttemp]: https://github.com/theran/theran.github.io/tree/template
-[quickstart]: http://theran.lt/2014/11/12/about-this-site.html
+This repo is the [Jekyll][jekyll] source to the LSBD 
+seminar's web page.
 
 ## Documentation
 
-At the moment, this is somewhat modular, except for the home page at 
-`index.html` and the CV and `CV.html` which contain some free text 
-inside the Liquid templates.
+New talks and terms can be added without editing either 
+`index.html` or `past-terms.html`.  Here are some details 
+about configuration and new data.
 
-Below is a quick guide to some of the features.
+### Configuration
 
-### Papers
+This happens in `_config.yml`.  The main attribute here is `seminar_current_term`,
+which needs to be updated to the tag of the current term when this changes.
 
-These are part of the collection `_papers`.  A typical journal article 
-frontmatter looks like this:
+Right now, we have "Fall", "Spring", and "Summer" terms.  (These are not exactly Aalto teaching periods, but the fouding organizers have no idea what these are.)
+
+### Terms
+
+This file `_data/seminarterms.yml` contains a list with entries of the form
+
+~~~~~~~~~~~~~~
+- 
+    tag: spring2016
+    name: "Spring 2016"
+~~~~~~~~~~~~~~
+
+When the term changes, add the new term in the same form.  The `tag` attribute is used in the top-matter of talk files.  The `name` attribute is used to generate the 
+list of talks from past terms.
+
+### Talks
+
+Each talk is in its own file in the directory `_seminartalks`.  The file name should be of the form `YYYY-MM-DD-LASTNAME.md`.  (This guarantees correct sorting.)
+
+The files have a header with the following form:
 
 ~~~~~~~~~~~~~~
 ---
-layout: paper
-type: journal
-arxiv: 1008.1837
-doi: 10.1016/j.aim.2012.10.007
-journal: advances
-authors:
-    - justin
-    - louis
-title: Generic combinatorial rigidity of periodic frameworks
-year: 2013
-volume: 233
-issue: 1
-pages: 291–331
+layout: seminartalk
+speaker: Kalle Kytölä
+speakerinst: Aalto University
+speakershortinst: Aalto
+speakerurl: https://math.aalto.fi/~kkytola/
+talktitle:  Scaling limit correlations for planar loop-erased random walks and uniform spanning trees
+talkdate: 05.04.2016
+talktime: 16.15
+talkplace: AScI lounge (TUAS 3161)
+talkterm: spring2016
+title: "Large Structures Seminar - Kalle Kytölä"
+dinnerplace: 
+dinnertime: 
+dinnerurl: 
 ---
 ~~~~~~~~~~~~~~
 
-The body is the abstract.  
-See this site for conferernce and preprint examples.  Authors conferences and journals 
-are listed in `_data/authors.yml`, `_data/conferences.yml`, and `_data/journals.yml`.
-This is enough to automatically generate your bibliography.
+When the term changes, switch the `talkterm` attribute to the new one.
 
-### CV
+We usually use `DD.MM.YYYY` as the date format.
 
-See `CV.html` for a semi-automated CV generator, that should be somewhat updatable.
-
-### Styling
-
-This is derived pretty closely from the Jekyll default.  I've tried to make 
-things even a little more modular, but I only noticed how SCSS mixins work
-recently, so more can be done.
+The body of the file is the talk abstract.  This is Markdown format with MathJax that is basically the same as what you have on MathOverflow, except that all formulas are delimited by `$$`, and it's inline unless it is in its own paragraph.
