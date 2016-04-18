@@ -6,8 +6,8 @@ speakershortinst: ENS
 speakerurl: http://www.lps.ens.fr/~adda/
 talktitle:  Origami mechanics
 talkdate: 03.05.2016
-talktime: TBD
-talkplace: TBD
+talktime: 1415
+talkplace: Y404, Otakaari 1 (main building)
 talkterm: spring2016
 title: "Large Structures Seminar - Mokhtar Adda-Bedia"
 dinnerplace: 
