@@ -8,7 +8,7 @@ url: "https://aaltoscienceinst.github.io" # the base hostname & protocol for you
 #url: "http://large-structures.asci.aalto.fi" # the base hostname & protocol for your site
 
 # current seminar term
-seminar_current_term: fall2016
+seminar_current_term: spring2017
 
 # collections
 collections:
