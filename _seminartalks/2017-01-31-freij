@@ -1,0 +1,21 @@
+---
+layout: seminartalk
+speaker: Ragnar Freij-Hollanti
+speakerinst: Aalto University
+speakershortinst: Aalto
+speakerurl: https://people.aalto.fi/ragnar_freij
+talktitle:  Reed-Solomon codes and Private Information Retrieval.
+talkdate: 31.01.2017
+talktime: 10.15
+talkplace: M237 (Otakaari 1)
+talkterm: spring2017
+title: "Large Structures Seminar - Ragnar Freij-Hollanti"
+dinnerplace: 
+dinnertime: 
+dinnerurl: 
+---
+Private information retrieval (PIR) addresses the question of
+how to retrieve data items from a database without disclosing information about
+the identity of the data items retrieved. The area has received renents of all thewed attention, after a model of coded PIR was introduced. Here the files are distributed over the servers according to a storage code, so there is no assumption of the conte servers being identical. We present a general framework for PIR from arbitrary coded databases, that allows one to adjust the scheme according to the suspected collections of colluding servers. We will survey capacity results and constructions in this area.
+
+In the second half of the talk, we introduce generalized Reed-Solomon (GRS) codes, and discuss some of their algebraic properties that are desirable in data storage applications. We show that our PIR schemes have optimal performance if the storage code is a generalized Reed-Solomon code. We compare our constructions to known capacity bounds for coded PIR, and introduce a new model of "coded PIR for caching", in which we conjecture that our constructions are optimal. This is joint work with Salim El Rouayheb, Oliver Gnilke, Camilla Hollanti, David Karpuk, and Razane Tajjedine.
